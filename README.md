@@ -6,12 +6,18 @@
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn install
 
-# development with vue devtools
-$ npm run dev
+# start with hot reload
+$ yarn run dev
 
-# build for production
-$ npm run build
+# build for production and start
+$ yarn run build
+$ yarn start
 
-For detailed explanation on how things work, checkout [Nuxt.js](https://github.com/nuxt/nuxt.js), [Electron.js](https://electronjs.org/), and [electron-builder](https://www.electron.build/).
+# build for production and package
+$ yarn release
+$ yarn package
+```
+
+For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org), [Electron](https://electronjs.org/), and [electron-builder](https://www.electron.build/).

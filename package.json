@@ -39,8 +39,10 @@
   "private": true,
   "productName": "Nuxt+Electron",
   "scripts": {
-    "build": "cross-env NODE_ENV=production nuxt build && electron-builder",
-    "dev": "electron .",
-    "lint": "eslint -f codeframe --ext .js,.vue --ignore-path .gitignore ."
+    "build": "nuxt build",
+    "dev": "cross-env NODE_ENV=development electron .",
+    "lint": "eslint -f codeframe --ext .js,.vue --ignore-path .gitignore .",
+    "package": "electron-builder",
+    "start": "electron ."
   }
 }

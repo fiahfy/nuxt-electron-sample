@@ -7,7 +7,7 @@ const { Nuxt, Builder } = require('nuxt')
 // Import and Set Nuxt.js options
 let config = require('./nuxt.config.js')
 config.rootDir = __dirname // for electron-builder
-config.dev = !(process.env.NODE_ENV === 'production')
+config.dev = process.env.NODE_ENV === 'development'
 
 let url
 async function start() {
