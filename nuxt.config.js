@@ -6,7 +6,7 @@ module.exports = {
   /*
    ** Headers of the page
    */
-  head: { title: pkg.name },
+  head: { title: pkg.productName },
 
   /*
    ** Customize the progress-bar color

@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-electron-sample",
+  "name": "nuxt-electron-boilerplate",
   "description": "Nuxt + Electron",
   "version": "1.0.0",
   "author": "fiahfy <d.fiahfy@gmail.com>",
@@ -37,6 +37,7 @@
   },
   "main": "main.js",
   "private": true,
+  "productName": "Nuxt+Electron",
   "scripts": {
     "build": "cross-env NODE_ENV=production nuxt build && electron-builder",
     "dev": "electron .",

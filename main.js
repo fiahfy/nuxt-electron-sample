@@ -38,7 +38,7 @@ const path = require('path')
 
 let mainWindow = null
 
-const createWindow = () => {
+const createWindow = async () => {
   mainWindow = new BrowserWindow({
     icon: path.join(__dirname, 'static/icon.png'),
     width: 820,
@@ -54,12 +54,9 @@ const createWindow = () => {
       default: installExtension,
       VUEJS_DEVTOOLS
     } = require('electron-devtools-installer')
-    installExtension(VUEJS_DEVTOOLS.id)
-      .then((name) => {
-        console.log(`Added Extension: ${name}`)
-        mainWindow.webContents.openDevTools()
-      })
-      .catch((err) => console.log('An error occurred: ', err))
+
+    const name = await installExtension(VUEJS_DEVTOOLS.id)
+    console.log(`Added Extension: ${name}`)
 
     // Wait for nuxt to build
     const pollServer = () => {
@@ -71,6 +68,7 @@ const createWindow = () => {
         .get(url, (res) => {
           if (res.statusCode === 200) {
             mainWindow.loadURL(url)
+            mainWindow.webContents.openDevTools()
           } else {
             setTimeout(pollServer, 300)
           }

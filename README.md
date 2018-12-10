@@ -1,4 +1,4 @@
-# nuxt-electron-sample
+# nuxt-electron-boilerplate
 
 > Nuxt + Electron
 

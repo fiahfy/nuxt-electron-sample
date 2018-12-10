@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <img width="256" src="~/assets/img/logo.png" />
-      <h1>nuxt-electron-sample</h1>
+      <h1>nuxt-electron-boilerplate</h1>
       <h2>Nuxt + Electron</h2>
       <a href="https://nuxtjs.org/" target="_blank" class="btn btn-primary">
         Documentation
