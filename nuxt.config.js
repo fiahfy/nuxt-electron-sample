@@ -1,24 +1,51 @@
+const pkg = require('./package')
+
 module.exports = {
-	mode: 'spa',
-	head: {title: 'nuxt-electron-sample'}, // Headers of the page
-	loading: false, // Disable default loading bar
-	build: {
-		extend (config, { isDev, isClient }) {
-			if (isDev && isClient) {
-				// Run ESLint on save
-				config.module.rules.push({
-					enforce: 'pre',
-					test: /\.(js|vue)$/,
-					loader: 'eslint-loader',
-					exclude: /(node_modules)/
-				})
-			}
-			// Extend only webpack config for client-bundle
-			if (isClient) { config.target = 'electron-renderer' }
-		}
-	},
-	dev: process.env.NODE_ENV === 'DEV',
-	css: [
-		'@/assets/css/global.css'
-	]
+  mode: 'spa',
+
+  /*
+   ** Headers of the page
+   */
+  head: { title: pkg.name },
+
+  /*
+   ** Customize the progress-bar color
+   */
+  loading: false,
+
+  /*
+   ** Global CSS
+   */
+  css: ['~/assets/css/global.css'],
+
+  /*
+   ** Plugins to load before mounting the App
+   */
+  plugins: [],
+
+  /*
+   ** Nuxt.js modules
+   */
+  modules: [],
+
+  /*
+   ** Build configuration
+   */
+  build: {
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+      // Extend only webpack config for client-bundle
+      if (ctx.isClient) {
+        config.target = 'electron-renderer'
+      }
+    }
+  }
 }

@@ -1,10 +1,8 @@
 {
   "name": "nuxt-electron-sample",
-  "version": "1.0.0",
   "description": "Nuxt + Electron",
+  "version": "1.0.0",
   "author": "fiahfy <d.fiahfy@gmail.com>",
-  "private": true,
-  "main": "main.js",
   "build": {
     "appId": "",
     "directories": {
@@ -17,25 +15,31 @@
       "nuxt.config.js"
     ],
     "mac": {
-      "target": ["dmg"]
+      "target": [
+        "dmg"
+      ]
     }
   },
-  "scripts": {
-    "dev": "cross-env NODE_ENV=DEV electron .",
-    "build": "nuxt build && electron-builder"
-  },
   "dependencies": {
-    "nuxt": "^1.4.0"
+    "nuxt": "^2.3.4"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
     "cross-env": "^5.1.4",
-    "electron": "2.0.0-beta.7",
+    "electron": "^3.0.10",
     "electron-builder": "^20.8.1",
     "electron-devtools-installer": "^2.2.3",
-    "eslint": "^4.15.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint": "^5.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "prettier": "^1.15.3"
+  },
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production nuxt build && electron-builder",
+    "dev": "electron .",
+    "lint": "eslint -f codeframe --ext .js,.vue --ignore-path .gitignore ."
   }
 }
