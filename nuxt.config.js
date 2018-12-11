@@ -6,7 +6,7 @@ module.exports = {
   /*
    ** Headers of the page
    */
-  head: { title: pkg.productName },
+  head: { title: pkg.productName, meta: { } },
 
   /*
    ** Customize the progress-bar color
@@ -47,5 +47,11 @@ module.exports = {
         config.target = 'electron-renderer'
       }
     }
+  },
+  router: {
+    base: `file:///${__dirname}/dist/`
   }
+// ,env: {
+//     baseUrl: 'http://localhost:3000'
+//   }
 }
