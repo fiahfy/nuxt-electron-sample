@@ -9,14 +9,14 @@
 $ yarn install
 
 # start with hot reload
-$ yarn run dev
+$ yarn dev
 
-# build for production and start
-$ yarn run build
+# generate app and start
+$ yarn generate
 $ yarn start
 
-# build for production and package
-$ yarn release
+# generate app and package
+$ yarn generate
 $ yarn package
 ```
 

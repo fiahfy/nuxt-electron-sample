@@ -46,6 +46,36 @@ module.exports = {
       if (ctx.isClient) {
         config.target = 'electron-renderer'
       }
+      // Set relative path
+      config.output.publicPath = './_nuxt/'
+    }
+  },
+
+  /*
+   ** Router configuration
+   */
+  router: {
+    mode: 'hash'
+  },
+
+  /*
+   ** Source directory
+   */
+  srcDir: 'src',
+
+  /*
+   ** Generate configuration
+   */
+  generate: {
+    dir: 'app'
+  },
+
+  /*
+   ** Vue configuration
+   */
+  vue: {
+    config: {
+      productionTip: false
     }
   }
 }
