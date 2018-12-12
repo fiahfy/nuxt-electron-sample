@@ -6,7 +6,7 @@ module.exports = {
   /*
    ** Headers of the page
    */
-  head: { title: pkg.productName, meta: { } },
+  head: { title: pkg.productName },
 
   /*
    ** Customize the progress-bar color
@@ -46,12 +46,36 @@ module.exports = {
       if (ctx.isClient) {
         config.target = 'electron-renderer'
       }
+      // Set relative path
+      config.output.publicPath = './_nuxt/'
     }
   },
+
+  /*
+   ** Router configuration
+   */
   router: {
-    base: `file:///${__dirname}/dist/`
+    mode: 'hash'
+  },
+
+  /*
+   ** Source directory
+   */
+  srcDir: 'src',
+
+  /*
+   ** Generate configuration
+   */
+  generate: {
+    dir: 'app'
+  },
+
+  /*
+   ** Vue configuration
+   */
+  vue: {
+    config: {
+      productionTip: false
+    }
   }
-// ,env: {
-//     baseUrl: 'http://localhost:3000'
-//   }
 }

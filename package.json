@@ -5,14 +5,9 @@
   "author": "fiahfy <d.fiahfy@gmail.com>",
   "build": {
     "appId": "",
-    "directories": {
-      "buildResources": "static"
-    },
     "files": [
-      ".nuxt/**/*",
-      "node_modules/**/*",
-      "main.js",
-      "nuxt.config.js"
+      "app",
+      "main.js"
     ],
     "mac": {
       "target": [
@@ -39,10 +34,10 @@
   "private": true,
   "productName": "Nuxt+Electron",
   "scripts": {
-    "build": "nuxt generate",
-    "dev": "nuxt & electron .",
+    "dev": "nuxt & cross-env NODE_ENV=development electron .",
+    "generate": "nuxt generate",
     "lint": "eslint -f codeframe --ext .js,.vue --ignore-path .gitignore .",
     "package": "electron-builder",
-    "start": "cross-env NODE_ENV=production electron ."
+    "start": "electron ."
   }
 }
