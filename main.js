@@ -1,5 +1,5 @@
-const { app, BrowserWindow } = require('electron')
 const http = require('http')
+const { app, BrowserWindow } = require('electron')
 
 const dev = process.env.NODE_ENV === 'development'
 const port = process.env.PORT || 3000
@@ -11,7 +11,6 @@ const createWindow = async () => {
     width: 820,
     height: 600
   })
-  mainWindow.on('closed', () => (mainWindow = null))
 
   if (dev) {
     // Disable security warnings
@@ -24,7 +23,7 @@ const createWindow = async () => {
     } = require('electron-devtools-installer')
 
     const name = await installExtension(VUEJS_DEVTOOLS.id)
-    console.log(`Added Extension: ${name}`)
+    console.log(`Added Extension: ${name}`) // eslint-disable-line no-console
 
     // Wait for nuxt to build
     const url = `http://localhost:${port}/`
@@ -44,12 +43,10 @@ const createWindow = async () => {
   } else {
     mainWindow.loadURL(`file://${__dirname}/app/index.html`)
   }
+
+  mainWindow.on('closed', () => (mainWindow = null))
 }
 
 app.on('ready', createWindow)
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
 app.on('activate', () => mainWindow === null && createWindow())
+app.on('window-all-closed', () => process.platform !== 'darwin' && app.quit())

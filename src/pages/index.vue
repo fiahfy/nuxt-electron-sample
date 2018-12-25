@@ -1,6 +1,7 @@
 <template>
   <section class="container">
     <div>
+      <!-- eslint-disable-next-line vue/html-self-closing -->
       <img width="256" src="~/assets/img/logo.png" />
       <h1>nuxt-electron-boilerplate</h1>
       <h2>Nuxt + Electron</h2>

@@ -11,12 +11,12 @@ $ yarn install
 # start with hot reload
 $ yarn dev
 
-# generate app and start
-$ yarn generate
+# build app and start
+$ yarn build
 $ yarn start
 
-# generate app and package
-$ yarn generate
+# build app and package
+$ yarn build
 $ yarn package
 ```
 

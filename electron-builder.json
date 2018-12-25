@@ -1,0 +1,16 @@
+{
+  "appId": "net.fiahfy.sample",
+  "files": [
+    "app",
+    "main.js"
+  ],
+  "mac": {
+    "target": ["dmg"]
+  },
+  "win": {
+    "target": ["nsis"]
+  },
+  "publish": {
+    "provider": "github"
+  }
+}
