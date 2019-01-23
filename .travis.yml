@@ -12,7 +12,7 @@ cache:
 
 script:
   - yarn test
-  - yarn release
+  # - yarn release
 
 branches:
   only:
