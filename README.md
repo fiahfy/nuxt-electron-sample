@@ -6,7 +6,7 @@
 
 ``` bash
 # install dependencies
-$ yarn install
+$ yarn
 
 # start with hot reload
 $ yarn dev
@@ -15,9 +15,9 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
-# build app and package
+# build app and release
 $ yarn build
-$ yarn package
+$ yarn release
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org), [Electron](https://electronjs.org/), and [electron-builder](https://www.electron.build/).
