@@ -12,7 +12,8 @@ cache:
 
 script:
   - yarn test
-  # - yarn release
+  - yarn build
+  - yarn release
 
 branches:
   only:
