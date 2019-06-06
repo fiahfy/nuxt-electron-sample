@@ -35,7 +35,10 @@ module.exports = {
   /*
    ** Headers of the page
    */
-  head: { title: pkg.productName },
+  head: {
+    title: pkg.productName,
+    meta: [{ hid: 'charset', charset: 'utf-8' }]
+  },
 
   /*
    ** SPA or Universal
