@@ -1,4 +1,5 @@
 # nuxt-electron-boilerplate
+[![Build Status](https://travis-ci.com/fiahfy/nuxt-electron-boilerplate.svg?branch=master)](https://travis-ci.com/fiahfy/nuxt-electron-boilerplate)
 
 > Boilerplate for Nuxt + Electron App.
 
