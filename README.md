@@ -1,9 +1,9 @@
 # nuxt-electron-boilerplate
 
-> Nuxt + Electron
+> Boilerplate for Nuxt + Electron App.
+
 
 ## Build Setup
-
 ``` bash
 # install dependencies
 $ yarn

@@ -1,6 +1,6 @@
 {
   "name": "nuxt-electron-boilerplate",
-  "description": "Nuxt + Electron",
+  "description": "Boilerplate for Nuxt + Electron App",
   "version": "1.0.1",
   "author": {
     "name": "fiahfy",
