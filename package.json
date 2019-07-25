@@ -41,7 +41,7 @@
     "dev": "cross-env NODE_ENV=development run-p serve electron",
     "electron": "electron main.js",
     "lint": "eslint -f codeframe --ext .js,.vue --ignore-path .gitignore .",
-    "release": "build -mw",
+    "release": "electron-builder -mw",
     "serve": "nuxt",
     "test": "run-s lint"
   }
